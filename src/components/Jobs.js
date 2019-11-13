@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 
 function Jobs(props){
     console.log("props", props)
-    const [job, setJob] = useState({jobs: " ", body:  " "}); 
+    const [job, setJob] = useState({name: " ", email:  " ", role: " "}); 
 
 
     const work = (e) => {
@@ -19,18 +19,26 @@ function Jobs(props){
     
     return (
         <div style={{marginTop: `10px`}}>
-            <form onSubmit={submitForm}>
-                <label htmlFor="jobs">Jobs</label>
+            <form style={{display: `flex`, flexDirection: `column`, alignItems:  `center`, width: `25%`}} onSubmit={submitForm}>
+                <label htmlFor="jobs">Name</label>
                 <input 
                 id="jobs" 
                 type='text'
-                name='jobs'
+                name='name'
                 onChange={work}
                 value = {job.jobs}
                 ></input>
+                <label htmlFor="jobs">Email</label>
+                <input 
+                id="jobs" 
+                type='text'
+                name='email'
+                onChange={work}
+                value = {job.email}
+                ></input>
                 
-                {/* <lable htmlFor="jobs"></lable> */}
-                <textarea id="jobs" name="body" value={job.body}  onChange={work}></textarea>
+                <label htmlFor="jobs">Role</label>
+                <textarea id="jobs" name="role" value={job.body}  onChange={work}></textarea>
                 <button type="submit">Add Note</button>
             </form>
             {/* <div style={{marginTop: `50px`}}>{job.jobs}</div>

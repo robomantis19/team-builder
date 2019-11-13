@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #0d51da;
 }
 
 .App-logo {
@@ -7,7 +8,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #0d51da;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -20,3 +21,28 @@
 .App-link {
   color: #09d3ac;
 }
+
+body {
+  
+font-family: Inconsolata, monospace;
+color: #F1F1F1;
+text-align: center;
+height: 100vh;
+}
+/* .img-container {
+display: flex;
+justify-content: center;
+align-items: center;
+} */
+
+.PostCards{
+
+
+  transition: transform 0.5s ease-in,
+}
+
+
+/* .PostCards:hover {
+    
+transform: translateY(-100px);
+}  */

@@ -6,22 +6,24 @@ import Postings from './components/Postings.js';
 function App() {
   const [posts, setPosts] = useState([
     {id: 1, 
-    jobs: "Dirty Jobs Done Just Right", 
-    body: "People around the world doing the dirtiest jobs, now its Mike Rowes Turn"
+    name: "Mr.Conely", 
+    email: "fa41@conely.com",
+    role: "Front End Engineer"
     }])
 
     const addNewPost = (input) => { 
       const addPost =  { 
         id: Date.now(), 
-        jobs: input.jobs, 
-        body: input.body
+        name: input.name, 
+        email: input.email,
+        role: input.role
 
       }
       setPosts([...posts, addPost])
     }
    
   return (
-    <div className="App">
+    <div style={{display: `flex`, flexDirection: `column`, height: `100vh`, width: `100%`, backgroundColor: `grey`, paddingTop: `200px`}} className="App">
       
         
        
